@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	           xmlns:artina="clr-namespace:UXDivers.Artina.Shared;assembly=UXDivers.Artina.Shared"
+	           xmlns:fab="clr-namespace:FAB.Forms;assembly=FAB.Forms"
+             xmlns:templates="clr-namespace:Cleaner.Templates"
+             x:Class="Cleaner.Pages.MainPage"
+            Title="Find a Cleaner">
+
+  <Grid>
+
+    <artina:GridOptionsView
+     ColumnCount="3"
+     RowCount="3"
+     ColumnSpacing="5"
+     RowSpacing="5"
+     Padding="5"
+     VerticalOptions="FillAndExpand"
+     ItemsSource="{Binding Items}">
+      <artina:GridOptionsView.ItemTemplate>
+        <DataTemplate>
+          <templates:DashboardItemTemplate
+              ShowBackgroundImage="false"
+              ShowBackgroundColor="true"
+              ShowiconColoredCircleBackground="false"
+              TextColor="White"/>
+        </DataTemplate>
+      </artina:GridOptionsView.ItemTemplate>
+    </artina:GridOptionsView>
+  </Grid>
+</ContentPage>
