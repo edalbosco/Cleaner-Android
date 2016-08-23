@@ -54,7 +54,7 @@ namespace Cleaner.Pages
 
         private void InitializeMasterDetail()
         {
-            Master = new ProfilePage();
+            Master = new MenuPage();
             Detail = new NavigationPage(new MainPage());
 
             App.Current.Navigation = new NavigationService(Detail.Navigation);

@@ -4125,8 +4125,8 @@ namespace Cleaner.Droid
 			// aapt resource value: 0x7f0200b2
 			public const int mr_ic_play_light = 2130837682;
 			
-			// aapt resource value: 0x7f0200b7
-			public const int notification_template_icon_bg = 2130837687;
+			// aapt resource value: 0x7f0200b8
+			public const int notification_template_icon_bg = 2130837688;
 			
 			// aapt resource value: 0x7f0200b3
 			public const int plus = 2130837683;
@@ -4135,10 +4135,13 @@ namespace Cleaner.Droid
 			public const int sewer = 2130837684;
 			
 			// aapt resource value: 0x7f0200b5
-			public const int splash = 2130837685;
+			public const int social_header_bg_0 = 2130837685;
 			
 			// aapt resource value: 0x7f0200b6
-			public const int user_profile_0 = 2130837686;
+			public const int splash = 2130837686;
+			
+			// aapt resource value: 0x7f0200b7
+			public const int user_profile_0 = 2130837687;
 			
 			static Drawable()
 			{

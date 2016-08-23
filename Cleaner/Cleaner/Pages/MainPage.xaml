@@ -20,7 +20,7 @@
       <artina:GridOptionsView.ItemTemplate>
         <DataTemplate>
           <templates:DashboardItemTemplate
-              ShowBackgroundImage="false"
+              ShowBackgroundImage="true"
               ShowBackgroundColor="true"
               ShowiconColoredCircleBackground="false"
               TextColor="White"/>

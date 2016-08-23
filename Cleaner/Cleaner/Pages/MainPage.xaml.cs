@@ -15,16 +15,11 @@ namespace Cleaner.Pages
 
         private Command moreShowsCommand;
 
-        ObservableCollection<ImageSource> _images;
-        int idx;
-
         public MainPage()
         {
             InitializeComponent();
 
             MoreShowsCommand = new Command(MoreShows);
-
-            idx = 2;
 
             BindingContext = this;
         }
@@ -60,27 +55,27 @@ namespace Cleaner.Pages
             get
             {
                 return new List<Models.Cleaner>() {
-                    SampleData.Cleaner[0],
-                    SampleData.Cleaner[3],
-                    SampleData.Cleaner[4],
+                    SampleData.Cleaners[0],
+                    SampleData.Cleaners[3],
+                    SampleData.Cleaners[4],
                 };
             }
         }
         
 
-        public async void OnItemTapped(object sender, EventArgs e)
-        {
-            var selectedItem = ((ListView)sender).SelectedItem;
-            var post = (Models.Cleaner)selectedItem;
-            var articleView = new ShowViewPage(new ViewModels.ShowViewModel(post));
-            try
-            {
-                await App.Current.Navigation.PushAsync(articleView);
-            }
-            catch (Exception ex)
-            {
-                Debug.WriteLine(ex.ToString());
-            }
-        }
+        //public async void OnItemTapped(object sender, EventArgs e)
+        //{
+        //    var selectedItem = ((ListView)sender).SelectedItem;
+        //    var post = (Models.Cleaner)selectedItem;
+        //    var articleView = new CleanerListPage();
+        //    try
+        //    {
+        //        await App.Current.Navigation.PushAsync(articleView);
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        Debug.WriteLine(ex.ToString());
+        //    }
+        //}
     }
 }

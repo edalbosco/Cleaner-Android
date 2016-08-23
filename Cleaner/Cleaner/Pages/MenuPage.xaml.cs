@@ -4,11 +4,11 @@ using Xamarin.Forms;
 
 namespace Cleaner.Pages
 {
-	public partial class ProfilePage : ContentPage
+	public partial class MenuPage : ContentPage
 	{
 		private TapGestureRecognizer tapGestureRecognizer = new TapGestureRecognizer();
 
-		public ProfilePage()
+		public MenuPage()
 		{
 			InitializeComponent ();
 

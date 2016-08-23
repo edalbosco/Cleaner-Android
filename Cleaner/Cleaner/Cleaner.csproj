@@ -50,7 +50,6 @@
     <Compile Include="Common\Badge.xaml.cs">
       <DependentUpon>Badge.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Controls\TVShowsWebView.cs" />
     <Compile Include="Helpers\ColorHelper.cs" />
     <Compile Include="Helpers\NavigationService.cs" />
     <Compile Include="Models\Cleaner.cs" />
@@ -64,6 +63,9 @@
     <Compile Include="Pages\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\CleanerPage.xaml.cs">
+      <DependentUpon>CleanerPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\RootPage.xaml.cs">
       <DependentUpon>RootPage.xaml</DependentUpon>
     </Compile>
@@ -76,11 +78,11 @@
     <Compile Include="Templates\DashboardItemTemplate.xaml.cs">
       <DependentUpon>DashboardItemTemplate.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Templates\TVShowItemTemplate.xaml.cs">
-      <DependentUpon>TVShowItemTemplate.xaml</DependentUpon>
+    <Compile Include="Templates\CleanerItemTemplate.xaml.cs">
+      <DependentUpon>CleanerItemTemplate.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\ProfilePage.xaml.cs">
-      <DependentUpon>ProfilePage.xaml</DependentUpon>
+    <Compile Include="Pages\MenuPage.xaml.cs">
+      <DependentUpon>MenuPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <DependentUpon>AssemblyInfo.xaml</DependentUpon>
@@ -170,7 +172,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Pages\ProfilePage.xaml">
+    <EmbeddedResource Include="Pages\MenuPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -196,7 +198,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Templates\TVShowItemTemplate.xaml">
+    <EmbeddedResource Include="Templates\CleanerItemTemplate.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -215,6 +217,15 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Templates\DashboardItemTemplate.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Controls\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\CleanerPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

@@ -52,63 +52,63 @@ namespace Cleaner.Models
         {
             new SampleCategory()
             {
-                Name="",
+                Name="Dishes",
                 BackgroundColor=Color.FromHex(CategoriesColors[0]),
                 BackgroundImage=DashboardImagesList[0],
                 Icon='\uf0e6'
             },
             new SampleCategory()
             {
-                Name="",
+                Name="External",
                 BackgroundColor=Color.FromHex(CategoriesColors[1]),
                 BackgroundImage=DashboardImagesList[1],
                 Icon='\uf0e6'
             },
             new SampleCategory()
             {
-                Name="",
+                Name="Hazardous",
                 BackgroundColor=Color.FromHex(CategoriesColors[2]),
                 BackgroundImage=DashboardImagesList[2],
                 Icon='\uf0e6'
             },
             new SampleCategory()
             {
-                Name="",
+                Name="Hotel Maids",
                 BackgroundColor=Color.FromHex(CategoriesColors[3]),
                 BackgroundImage=DashboardImagesList[3],
                 Icon='\uf0e6'
             },
             new SampleCategory()
             {
-                Name="",
+                Name="Household",
                 BackgroundColor=Color.FromHex(CategoriesColors[4]),
                 BackgroundImage=DashboardImagesList[4],
                 Icon='\uf0e6'
             },
             new SampleCategory()
             {
-                Name="",
+                Name="Ice & Snow",
                 BackgroundColor=Color.FromHex(CategoriesColors[5]),
                 BackgroundImage=DashboardImagesList[5],
                 Icon='\uf0e6'
             },
             new SampleCategory()
             {
-                Name="",
+                Name="Janitor",
                 BackgroundColor=Color.FromHex(CategoriesColors[6]),
                 BackgroundImage=DashboardImagesList[6],
                 Icon='\uf0e6'
             },
             new SampleCategory()
             {
-                Name="",
+                Name="Laundry",
                 BackgroundColor=Color.FromHex(CategoriesColors[7]),
                 BackgroundImage=DashboardImagesList[7],
                 Icon='\uf0e6'
             },
             new SampleCategory()
             {
-                Name="",
+                Name="Sewer",
                 BackgroundColor=Color.FromHex(CategoriesColors[8]),
                 BackgroundImage=DashboardImagesList[8],
                 Icon='\uf0e6'
@@ -125,45 +125,45 @@ namespace Cleaner.Models
 			new User( Names[5], UsersImagesList[5] ),
 		};
         
-        public static List<Cleaner> Cleaner = new List<Cleaner> {
+        public static List<Cleaner> Cleaners = new List<Cleaner> {
             new Cleaner(
                 Users[0],
-                "5 years",
+                "Experience 2 years",
                 "hazardous, household, external",
                 true
             ),
 
             new Cleaner(
                 Users[1],
-                "5 years",
+                "Experience 5 years",
                 "hazardous, household, external",
                 true
             ),
 
             new Cleaner(
                 Users[2],
-                "5 years",
+                "Experience 3 years",
                 "hazardous, household, external",
                 true
             ),
 
             new Cleaner(
                 Users[3],
-                "5 years",
+                "Experience 5 years",
                 "hazardous, household, external",
                 true
             ),
 
             new Cleaner(
                 Users[4],
-                "5 years",
+                "Experience 2 years",
                 "hazardous, household, external",
                 true
             ),
 
             new Cleaner(
                 Users[5],
-                "5 years",
+                "Experience 10 years",
                 "hazardous, household, external",
                 true
             )

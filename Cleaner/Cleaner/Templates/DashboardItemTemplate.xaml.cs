@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Cleaner.Pages;
+using System;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 
@@ -60,27 +61,32 @@ namespace Cleaner.Templates
 		public DashboardItemTemplate ( )
 		{
 			InitializeComponent();
-		}
+        }
 
-		public async void OnWidgetTapped(object sender, EventArgs e)
-		{
-			if (_processingTag) 
-			{
-				return;
-			}
+        public async void OnWidgetTapped(object sender, EventArgs e)
+        {
+            if (_processingTag)
+            {
+                return;
+            }
 
-			_processingTag = true;
-		
-			try{
-				await AnimateItem (this, animationDuration 	);
+            _processingTag = true;
 
-		//		await SamplesListFromCategoryPage.NavigateToCategory ((SampleCategory)BindingContext, Navigation);
-			}finally{
-				_processingTag = false;
-			}
-		}
+            try
+            {
+                await AnimateItem(this, animationDuration);
 
-		private async Task AnimateItem(View uiElement, uint duration ){
+                await App.Current.Navigation.PushAsync(new CleanerListPage());
+
+                //	await SamplesListFromCategoryPage.NavigateToCategory ((SampleCategory)BindingContext, Navigation);
+            }
+            finally
+            {
+                _processingTag = false;
+            }
+        }
+
+        private async Task AnimateItem(View uiElement, uint duration ){
 			var originalOpacity = uiElement.Opacity;
 
 			await uiElement.FadeTo(.5, duration/2, Easing.CubicIn);

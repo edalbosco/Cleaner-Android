@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+	xmlns="http://xamarin.com/schemas/2014/forms"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	Title="Contact Cleaner"
+	x:Class="Cleaner.Pages.CleanerPage"
+	xmlns:artina="clr-namespace:UXDivers.Artina.Shared;assembly=UXDivers.Artina.Shared"
+	xmlns:templates="clr-namespace:Cleaner.Templates"
+	xmlns:commonViews="clr-namespace:Cleaner.Common"
+	x:Name="page"
+	BackgroundColor="White">
+
+  <ContentPage.Content>
+    <ScrollView>
+
+      <!--GRID WRAPPER-->
+      <Grid Padding="0">
+        <Grid.RowDefinitions>
+          <RowDefinition Height="Auto" />
+          <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <!--SOCIAL HEADER-->
+        <Grid Grid.Row="0"
+					HeightRequest="200"
+						BackgroundColor="{StaticResource AccentColor }"
+					Padding="0"
+					>
+
+          <!-- BACKGROUND IMAGE -->
+          <!--<Image
+						BackgroundColor="{StaticResource AccentColor }"
+						Source="{ StaticResource SocialHeaderBackgroundImage0 }"
+						IsOpaque="false"
+						Opacity="0.75"
+						Aspect="AspectFill"
+						HorizontalOptions="FillAndExpand"
+						VerticalOptions="FillAndExpand"/>-->
+
+
+          <StackLayout
+            Orientation="Vertical"
+            Spacing="20"
+					>
+
+            <Grid
+              HorizontalOptions="Center"
+              VerticalOptions="Center"
+              TranslationY="25">
+
+              <!-- AVATAR -->
+              <artina:CircleImage
+                x:Name="avatar"
+                Source="{ Binding User.Avatar }"
+                HeightRequest="100"
+                WidthRequest="100"
+							/>
+            </Grid>
+
+            <!-- USER NAME AND DESCRIPTION -->
+            <StackLayout Padding="20"
+              >
+              <Label
+                Text="{ Binding User.Name }"
+                TextColor="White"
+                HorizontalOptions="Center"
+                FontSize="18"
+                FontAttributes="Bold" />
+            </StackLayout>
+          </StackLayout>
+
+        </Grid>
+
+        <Grid Grid.Row="1">
+
+          <!--SOCIAL HEADER-->
+          <StackLayout Padding="0">
+
+            <templates:SocialHeaderStyleTemplate
+              Text="Experience"
+              IconText="&#xf0c0; "/>
+
+            <Label Text="{ Binding Experience }" Style="{StaticResource StatusLabelStyle}" FontSize="17" Margin="5,0,0,0" />
+
+            <BoxView Style="{StaticResource SocialHeaderStyleBorderBottomStyle}" />
+
+            <templates:SocialHeaderStyleTemplate
+              Text="Email"
+              IconText="&#xf003; "/>
+
+            <Label Text="Cleaner1@Cleaners.com" Style="{StaticResource StatusLabelStyle}" FontSize="17" Margin="5,0,0,0" />
+
+            <BoxView  Style="{StaticResource SocialHeaderStyleBorderBottomStyle}" />
+
+            <!-- SOCIAL HEADER -->
+            <templates:SocialHeaderStyleTemplate
+              Text="Contact No."
+              IconText="&#xf095; "/>
+
+            <Label Text="+61 3 95137831" Style="{StaticResource StatusLabelStyle}" FontSize="17" Margin="5,0,0,0" />
+
+
+            <!-- SOCIAL HEADER -->
+            <templates:SocialHeaderStyleTemplate
+              Text="Nationality"
+              IconText="&#xf0ac; "/>
+
+            <Label Text="Autralian" Style="{StaticResource StatusLabelStyle}" FontSize="17" Margin="5,0,0,0" />
+
+            <BoxView
+              Style="{StaticResource SocialHeaderStyleBorderBottomStyle}" />
+
+            <StackLayout Padding="20" BackgroundColor="White">
+              <artina:Button
+                Style="{ StaticResource PrimaryActionButtonStyle }"
+                Text="Contact Cleaner"
+							 />
+            </StackLayout>
+            
+          </StackLayout>
+        </Grid>
+      </Grid>
+    </ScrollView>
+  </ContentPage.Content>
+</ContentPage>

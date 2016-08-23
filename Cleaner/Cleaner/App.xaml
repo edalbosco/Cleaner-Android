@@ -19,7 +19,7 @@
 				to see your changes on your App
 			-->
       <!-- Export AccentColor -->
-      <Color x:Key="AccentColor">#FF007F0E</Color>
+      <Color x:Key="AccentColor">#FFDA125F</Color>
       <!-- Export InverseTextColor -->
       <Color x:Key="InverseTextColor">White</Color>
 
@@ -474,8 +474,8 @@
       </Style>
 
       <Style x:Key="AvatarLarge" TargetType="artina:CircleImage" BasedOn="{ StaticResource Avatar }">
-        <Setter Property="WidthRequest" Value="110" />
-        <Setter Property="HeightRequest" Value="110" />
+        <Setter Property="WidthRequest" Value="90" />
+        <Setter Property="HeightRequest" Value="90" />
       </Style>
 
 

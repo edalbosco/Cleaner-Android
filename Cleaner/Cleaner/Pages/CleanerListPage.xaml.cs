@@ -2,43 +2,39 @@
 using Cleaner.Models;
 using Cleaner.ViewModels;
 using Xamarin.Forms;
+using System.Collections.Generic;
 
 namespace Cleaner.Pages
 {
 	public partial class CleanerListPage : ContentPage
 	{
-		public CleanerListPage() : this(new ShowViewModel())
-		{
-		}
+	
 
-		public ShowViewPage(ShowViewModel viewModel)
+		public CleanerListPage()
 		{
 			InitializeComponent ();
-			BindingContext = viewModel;
+            BindingContext = this; 
 		}
 
-		protected override void OnAppearing (){
-			base.OnAppearing ();
+        public List<Models.Cleaner> Cleaners {
+            get
+            {
+                return SampleData.Cleaners;
+            }
+        }
 
-   //         wvArticle.Source = new HtmlWebViewSource() { Html = (BindingContext as ShowViewModel).Post.Body };
-			outerScrollView.Scrolled += OnScroll;
+
+        protected override void OnAppearing (){
+			base.OnAppearing ();
+            
 		}
 
 		protected override void OnDisappearing ()
 		{
 			base.OnDisappearing ();
-			outerScrollView.Scrolled -= OnScroll;
+			
 		}
 
-		public void OnScroll (object sender, ScrolledEventArgs e) {
-			var imageHeight = img.Height * 2;
-			var scrollRegion = layeringGrid.Height - outerScrollView.Height;
-			var parallexRegion = imageHeight - outerScrollView.Height;
-			var factor = outerScrollView.ScrollY - parallexRegion * (outerScrollView.ScrollY / scrollRegion);
-			img.TranslationY = factor;
-			img.Opacity = 1 - ( factor / imageHeight ) ;
-			headers.Scale = 1 - ( (factor ) / (imageHeight * 2) ) ;
-		}
 
 		public void OnMore (object sender, EventArgs e) {
 			var mi = ((MenuItem)sender);
@@ -51,11 +47,10 @@ namespace Cleaner.Pages
 		}
 
 		public void OnItemTapped (object sender, EventArgs e) {
-			var message = (Message)((ListView)sender).SelectedItem;
-			DisplayAlert("Message Tapped", "You tapped on " + message.From.Name + "'s message.", "OK");
+            var item = (Models.Cleaner)((ListView)sender).SelectedItem;
 
-			this.Navigation.PopModalAsync ();
-		}
+            App.Current.Navigation.PushAsync(new CleanerPage(item));
+        }
 
 		public void OnPrimaryActionButtonClicked (object sender, EventArgs e){
 

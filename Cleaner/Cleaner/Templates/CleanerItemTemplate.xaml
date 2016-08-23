@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView
+	xmlns="http://xamarin.com/schemas/2014/forms"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	x:Class="Cleaner.Templates.CleanerItemTemplate"
+	xmlns:artina="clr-namespace:UXDivers.Artina.Shared;assembly=UXDivers.Artina.Shared">
+
+  <ContentView.Resources>
+    <ResourceDictionary>
+
+      <artina:BooleanToObjectConverter x:Key="isStaredIconConverter" x:TypeArguments="x:String"
+			TrueValue="&#xf005;" FalseValue="&#xf006;"/>
+
+    </ResourceDictionary>
+  </ContentView.Resources>
+
+  <StackLayout
+		Spacing="0"
+		Orientation="Horizontal"
+		Padding="5, 0, 5, 0"
+		HorizontalOptions="FillAndExpand" >
+
+    <!--<Image Source="{Binding User.Avatar}"
+			Aspect ="AspectFill"
+			HorizontalOptions = "Center"
+			VerticalOptions = "Start"
+			/>-->
+    <artina:CircleImage
+          Source="{ Binding User.Avatar }"
+          Style="{ StaticResource AvatarLarge }" />
+    
+    <StackLayout
+			Padding="10, 0, 0, 0" Spacing="0"
+			Orientation="Horizontal"
+			HorizontalOptions="FillAndExpand">
+
+
+      <StackLayout HorizontalOptions="FillAndExpand" Spacing="0" Padding="10">
+        <StackLayout Orientation="Horizontal">
+          <Label
+            Text="{Binding User.Name}"
+            HorizontalOptions="Fill"
+            VerticalOptions="EndAndExpand"
+            TextColor="#FF212121"
+            
+						/>
+
+
+        </StackLayout>
+        <StackLayout Orientation="Horizontal" >
+          <Label
+        Text="{Binding Experience}"
+        FontSize ="12"
+        HorizontalTextAlignment="End"
+        HorizontalOptions="End"
+        VerticalOptions="Center"
+							/>
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal" Padding="2" Margin="0,10">
+
+          <Label
+          HorizontalTextAlignment="End"
+          HorizontalOptions="End"
+          VerticalOptions="EndAndExpand"
+          FontSize ="16"
+          WidthRequest="24"
+          Style="{StaticResource FontIcon}"
+          Text="{	
+									Binding IsStared, 
+									Converter={ StaticResource isStaredIconConverter 
+								}"
+          TextColor="#FFFFDC77"
+							/>
+          <Label
+          HorizontalTextAlignment="End"
+          HorizontalOptions="End"
+          VerticalOptions="EndAndExpand"
+          FontSize ="16"
+          WidthRequest="24"
+          Style="{StaticResource FontIcon}"
+          Text="{	
+									Binding IsStared, 
+									Converter={ StaticResource isStaredIconConverter 
+								}"
+          TextColor="#FFFFDC77"
+							/>
+          <Label
+          HorizontalTextAlignment="End"
+          HorizontalOptions="End"
+          VerticalOptions="EndAndExpand"
+          FontSize ="16"
+          WidthRequest="24"
+          Style="{StaticResource FontIcon}"
+          Text="{	
+									Binding IsStared, 
+									Converter={ StaticResource isStaredIconConverter 
+								}"
+          TextColor="#FFFFDC77"
+							/>
+          <Label
+          HorizontalTextAlignment="End"
+          HorizontalOptions="End"
+          VerticalOptions="EndAndExpand"
+          FontSize ="16"
+          WidthRequest="24"
+          Style="{StaticResource FontIcon}"
+          Text="{	
+									Binding IsStared, 
+									Converter={ StaticResource isStaredIconConverter 
+								}"
+          TextColor="#FFFFDC77"
+							/>
+          <Label
+          HorizontalTextAlignment="End"
+          HorizontalOptions="End"
+          VerticalOptions="EndAndExpand"
+          FontSize ="16"
+          WidthRequest="24"
+          Style="{StaticResource FontIcon}"
+          Text="&#xf006;"
+          TextColor="#FFFFDC77"
+							/>
+          
+        </StackLayout>
+        
+        
+      </StackLayout>
+
+    </StackLayout>
+    <Label Style="{StaticResource FontIcon}" 
+           Text="&#xf105;" HorizontalOptions="End" 
+           VerticalOptions="Center" 
+           FontSize="24"/>
+  </StackLayout>
+</ContentView>
